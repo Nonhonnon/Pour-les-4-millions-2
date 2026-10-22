@@ -1,88 +1,129 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Comprendre les institutions publiques du Gabon et les responsables qui les dirigent.">
-  <title>Pour les 4 millions 2 — Institutions du Gabon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Pour les 4 millions 2, accueil">
-      <span class="brand-mark">4<span>·</span>2</span>
-      <span class="brand-name">POUR LES<br><strong>4 MILLIONS 2</strong></span>
-    </a>
-    <nav class="main-nav" aria-label="Navigation principale">
-      <a class="active" href="index.html">Institutions</a>
-      <a href="gabon.html">Le Gabon</a>
-      <a class="nav-cta" href="#reperes">Repères clés <span aria-hidden="true">↘</span></a>
-    </nav>
-  </header>
-  <main id="contenu">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span></span> Comprendre l’action publique</p>
-        <h1>Le service public,<br>en <em>clair.</em></h1>
-        <p class="hero-intro">Un guide citoyen pour découvrir les institutions du Gabon, comprendre leur rôle et savoir qui les dirige.</p>
-        <a class="button button-dark" href="#institutions">Explorer les institutions <span aria-hidden="true">↓</span></a>
-        <p class="hero-note">Une initiative d’information citoyenne · Mise à jour : <time id="update-date"></time></p>
-      </div>
-      <div class="hero-art" aria-label="Illustration abstraite aux couleurs du Gabon" role="img">
-        <div class="art-sun"></div><div class="art-line art-line-one"></div><div class="art-line art-line-two"></div>
-        <div class="art-label"><span>GABON</span><strong>La République<br>à portée de tous.</strong><span class="art-coordinates">0°23′ N · 9°27′ E</span></div>
-        <div class="art-stamp">ÉDITION<br><b>2026</b></div>
-      </div>
-    </section>
-    <section class="stats-strip" id="reperes" aria-label="Quelques repères">
-      <div><strong>3</strong><span>pouvoirs<br>publics</span></div>
-      <div><strong>9</strong><span>provinces</span></div>
-      <div><strong>1</strong><span>République<br>unitaire</span></div>
-      <p>Des institutions qui structurent la vie démocratique et administrative du pays.</p>
-    </section>
-    <section class="institutions-section" id="institutions">
-      <div class="section-heading">
-        <div><p class="eyebrow">Le panorama institutionnel</p><h2>Qui fait quoi<br>au Gabon<span> ?</span></h2></div>
-        <p>Explorez les principales institutions de l’État et les autorités publiques. Les responsables peuvent changer : les liens officiels sont là pour vérifier les informations les plus récentes.</p>
-      </div>
-      <div class="directory-tools">
-        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Rechercher une institution</span><input id="search" type="search" placeholder="Rechercher une institution…" autocomplete="off"></label>
-        <div class="filters" role="group" aria-label="Filtrer par catégorie">
-          <button class="filter active" data-filter="toutes" aria-pressed="true">Toutes</button>
-          <button class="filter" data-filter="executif" aria-pressed="false">Exécutif</button>
-          <button class="filter" data-filter="legislatif" aria-pressed="false">Législatif</button>
-          <button class="filter" data-filter="justice" aria-pressed="false">Justice</button>
-          <button class="filter" data-filter="controle" aria-pressed="false">Contrôle & services</button>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Comprendre les institutions publiques du Gabon et les responsables qui les dirigent.">
+    <title>Pour les 4 millions 2 — Institutions du Gabon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Lien d’accessibilité permettant d’accéder directement au contenu principal. -->
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <!-- En-tête commun : identité du site et navigation principale. -->
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Pour les 4 millions 2, accueil">
+        <span class="brand-mark">4<span>·</span>2</span>
+        <span class="brand-name">POUR LES<br><strong>4 MILLIONS 2</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a class="active" href="index.html">Institutions</a>
+        <a href="gabon.html">Le Gabon</a>
+        <a class="nav-cta" href="#reperes">Repères clés <span aria-hidden="true">↘</span></a>
+      </nav>
+    </header>
+
+    <main id="contenu">
+      <!-- Présentation du projet et illustration d’accueil. -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Comprendre l’action publique</p>
+          <h1>Le service public,<br>en <em>clair.</em></h1>
+          <p class="hero-intro">Un guide citoyen pour découvrir les institutions du Gabon, comprendre leur rôle et savoir qui les dirige.</p>
+          <a class="button button-dark" href="#institutions">Explorer les institutions <span aria-hidden="true">↓</span></a>
+          <p class="hero-note">Une initiative d’information citoyenne · Mise à jour : <time id="update-date"></time></p>
         </div>
-      </div>
-      <p class="results-count" id="results-count" aria-live="polite"></p>
-      <div class="institution-grid" id="institution-grid"></div>
-      <div class="empty-state" id="empty-state" hidden>Aucune institution ne correspond à votre recherche. Essayez un autre mot-clé.</div>
-    </section>
-    <section class="trust-banner">
-      <div class="trust-icon">i</div>
-      <div><p class="eyebrow">Information responsable</p><h2>Les fonctions sont stables.<br>Les titulaires peuvent changer.</h2><p>Les noms sont affichés uniquement lorsqu’une source publique récente permet de les confirmer. Pour les autres responsables, consultez le site officiel de l’institution.</p></div>
-      <a class="text-link" href="#sources">Voir les sources <span aria-hidden="true">↗</span></a>
-    </section>
-    <section class="sources-section" id="sources">
-      <p class="eyebrow">Pour aller plus loin</p><h2>Sources et vérification</h2>
-      <p>Les notices présentent les missions générales des institutions. Pour les mandats, textes en vigueur et noms des responsables, privilégiez les publications officielles.</p>
-      <div class="source-links">
-        <a href="https://presidence.ga/" target="_blank" rel="noopener">Présidence de la République <span>↗</span></a>
-        <a href="https://gouvernement.ga/" target="_blank" rel="noopener">Portail du Gouvernement <span>↗</span></a>
-        <a href="https://www.assemblee-nationale.ga/" target="_blank" rel="noopener">Assemblée nationale <span>↗</span></a>
-        <a href="https://www.senat.ga/" target="_blank" rel="noopener">Sénat <span>↗</span></a>
-        <a href="https://www.courconstitutionnelle.ga/" target="_blank" rel="noopener">Cour constitutionnelle <span>↗</span></a>
-        <a href="https://www.ccomptes.ga/" target="_blank" rel="noopener">Cour des comptes <span>↗</span></a>
-      </div>
-      <p class="source-disclaimer">Ce site est un projet citoyen indépendant. Il ne représente pas une administration publique et ne remplace pas les sources officielles.</p>
-    </section>
-  </main>
-  <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">4<span>·</span>2</span><span class="brand-name">POUR LES<br><strong>4 MILLIONS 2</strong></span></a><p>Comprendre les institutions, c’est mieux participer à la vie citoyenne.</p><a href="gabon.html">Découvrir le Gabon ↗</a><span class="copyright">© 2026 · Projet citoyen</span></footer>
-</body>
+        <div class="hero-art" aria-label="Illustration abstraite aux couleurs du Gabon" role="img">
+          <div class="art-sun"></div>
+          <div class="art-line art-line-one"></div>
+          <div class="art-line art-line-two"></div>
+          <div class="art-label">
+            <span>GABON</span>
+            <strong>La République<br>à portée de tous.</strong>
+            <span class="art-coordinates">0°23′ N · 9°27′ E</span>
+          </div>
+          <div class="art-stamp">ÉDITION<br><b>2026</b></div>
+        </div>
+      </section>
+
+      <!-- Quelques repères généraux sur les institutions du pays. -->
+      <section class="stats-strip" id="reperes" aria-label="Quelques repères">
+        <div><strong>3</strong><span>pouvoirs<br>publics</span></div>
+        <div><strong>9</strong><span>provinces</span></div>
+        <div><strong>1</strong><span>République<br>unitaire</span></div>
+        <p>Des institutions qui structurent la vie démocratique et administrative du pays.</p>
+      </section>
+
+      <!-- Annuaire : la grille est remplie par app.js. -->
+      <section class="institutions-section" id="institutions">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Le panorama institutionnel</p>
+            <h2>Qui fait quoi<br>au Gabon<span> ?</span></h2>
+          </div>
+          <p>Explorez les principales institutions de l’État et les autorités publiques. Les responsables peuvent changer : les liens officiels sont là pour vérifier les informations les plus récentes.</p>
+        </div>
+        <div class="directory-tools">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">Rechercher une institution</span>
+            <input id="search" type="search" placeholder="Rechercher une institution…" autocomplete="off">
+          </label>
+          <div class="filters" role="group" aria-label="Filtrer par catégorie">
+            <button class="filter active" data-filter="toutes" aria-pressed="true">Toutes</button>
+            <button class="filter" data-filter="executif" aria-pressed="false">Exécutif</button>
+            <button class="filter" data-filter="legislatif" aria-pressed="false">Législatif</button>
+            <button class="filter" data-filter="justice" aria-pressed="false">Justice</button>
+            <button class="filter" data-filter="controle" aria-pressed="false">Contrôle & services</button>
+          </div>
+        </div>
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <div class="institution-grid" id="institution-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>Aucune institution ne correspond à votre recherche. Essayez un autre mot-clé.</div>
+      </section>
+
+      <!-- Rappel sur la vérification des noms et des fonctions. -->
+      <section class="trust-banner">
+        <div class="trust-icon">i</div>
+        <div>
+          <p class="eyebrow">Information responsable</p>
+          <h2>Les fonctions sont stables.<br>Les titulaires peuvent changer.</h2>
+          <p>Les noms sont affichés uniquement lorsqu’une source publique récente permet de les confirmer. Pour les autres responsables, consultez le site officiel de l’institution.</p>
+        </div>
+        <a class="text-link" href="#sources">Voir les sources <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <!-- Liens externes pour vérifier les informations institutionnelles. -->
+      <section class="sources-section" id="sources">
+        <p class="eyebrow">Pour aller plus loin</p>
+        <h2>Sources et vérification</h2>
+        <p>Les notices présentent les missions générales des institutions. Pour les mandats, textes en vigueur et noms des responsables, privilégiez les publications officielles.</p>
+        <div class="source-links">
+          <a href="https://presidence.ga/" target="_blank" rel="noopener">Présidence de la République <span>↗</span></a>
+          <a href="https://gouvernement.ga/" target="_blank" rel="noopener">Portail du Gouvernement <span>↗</span></a>
+          <a href="https://www.assemblee-nationale.ga/" target="_blank" rel="noopener">Assemblée nationale <span>↗</span></a>
+          <a href="https://www.senat.ga/" target="_blank" rel="noopener">Sénat <span>↗</span></a>
+          <a href="https://www.courconstitutionnelle.ga/" target="_blank" rel="noopener">Cour constitutionnelle <span>↗</span></a>
+          <a href="https://www.ccomptes.ga/" target="_blank" rel="noopener">Cour des comptes <span>↗</span></a>
+        </div>
+        <p class="source-disclaimer">Ce site est un projet citoyen indépendant. Il ne représente pas une administration publique et ne remplace pas les sources officielles.</p>
+      </section>
+    </main>
+
+    <!-- Pied de page commun aux pages du site. -->
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="index.html">
+        <span class="brand-mark">4<span>·</span>2</span>
+        <span class="brand-name">POUR LES<br><strong>4 MILLIONS 2</strong></span>
+      </a>
+      <p>Comprendre les institutions, c’est mieux participer à la vie citoyenne.</p>
+      <a href="gabon.html">Découvrir le Gabon ↗</a>
+      <span class="copyright">© 2026 · Projet citoyen</span>
+    </footer>
+  </body>
 </html>
