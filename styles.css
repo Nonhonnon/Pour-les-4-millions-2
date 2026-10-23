@@ -638,8 +638,18 @@ h1,h2,h3,p {
 }
 
 .brand-footer .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
     background: var(--yellow);
     color: var(--ink)
+}
+
+.brand-footer .brand-mark .flag-cloth {
+    display: inline-block;
+    width: 12px;
+    height: 8px
 }
 
 .brand-footer .brand-mark > span {
@@ -780,16 +790,6 @@ h1,h2,h3,p {
     padding: 100px 15% 85px
 }
 
-.story-aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
-}
-
-.story-aside span {
-    font-size: 10px;
-    color: #aaa79f;
-    letter-spacing: 1px
 .anthem-block {
     grid-column: 1 / -1;
     padding: 28px 32px;
@@ -810,6 +810,16 @@ h1,h2,h3,p {
     white-space: pre-line
 }
 
+.story-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.story-aside span {
+    font-size: 10px;
+    color: #aaa79f;
+    letter-spacing: 1px
 }
 
 .country-story article h2 {
@@ -857,36 +867,6 @@ h1,h2,h3,p {
     font: 600 13px var(--font-display)
 }
 
-.country-source {
-    padding: 65px 7.1% 75px
-}
-
-.country-source>p:not(.eyebrow) {
-    font-size: 11px;
-    color: #77756f;
-    line-height: 1.8;
-    max-width: 730px
-}
-
-.country-source .source-links {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 700px;
-    margin-top: 20px
-}
-
-/* Ajustements pour les écrans intermédiaires (900 px et moins). */
-@media(max-width:900px) {
-    .hero {
-        padding-left: 5%;
-        padding-right: 5%;
-        gap: 4%
-    }
-
-    .site-header {
-        padding: 0 5%
-    }
-
-    .hero-art {
 .province-list a {
     display: flex;
     justify-content: space-between;
@@ -974,6 +954,36 @@ h1,h2,h3,p {
     margin-top: 10px
 }
 
+.country-source {
+    padding: 65px 7.1% 75px
+}
+
+.country-source>p:not(.eyebrow) {
+    font-size: 11px;
+    color: #77756f;
+    line-height: 1.8;
+    max-width: 730px
+}
+
+.country-source .source-links {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin-top: 20px
+}
+
+/* Ajustements pour les écrans intermédiaires (900 px et moins). */
+@media(max-width:900px) {
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 4%
+    }
+
+    .site-header {
+        padding: 0 5%
+    }
+
+    .hero-art {
         height: 350px
     }
 
@@ -1230,6 +1240,24 @@ h1,h2,h3,p {
         padding: 65px 7%
     }
 
+    .province-story {
+        padding: 65px 7%
+    }
+
+    .province-content {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+
+    .department-list li {
+        flex-direction: column;
+        gap: 4px
+    }
+
+    .department-list li span {
+        text-align: left
+    }
+
     .story-aside {
         flex-direction: row
     }
@@ -1260,24 +1288,6 @@ h1,h2,h3,p {
     }
 
     .main-nav .nav-cta span {
-    .province-story {
-        padding: 65px 7%
-    }
-
-    .province-content {
-        grid-template-columns: 1fr;
-        gap: 28px
-    }
-
-    .department-list li {
-        flex-direction: column;
-        gap: 4px
-    }
-
-    .department-list li span {
-        text-align: left
-    }
-
         font-size: 13px;
         margin: 0
     }
