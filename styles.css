@@ -790,6 +790,26 @@ h1,h2,h3,p {
     font-size: 10px;
     color: #aaa79f;
     letter-spacing: 1px
+.anthem-block {
+    grid-column: 1 / -1;
+    padding: 28px 32px;
+    background: #eae9e4
+}
+
+.anthem-block h2 {
+    font: 700 24px/1.25 var(--font-display);
+    letter-spacing: -.8px;
+    margin-bottom: 16px
+}
+
+.anthem-block p {
+    margin: 0;
+    color: #56544f;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-line
+}
+
 }
 
 .country-story article h2 {
