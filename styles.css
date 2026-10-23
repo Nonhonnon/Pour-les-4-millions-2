@@ -74,8 +74,43 @@ a {
     letter-spacing: -1px
 }
 
-.brand-mark span {
-    color: #fff
+.brand-flag {
+    perspective: 90px;
+    background: transparent
+}
+
+.flag-cloth {
+    width: 36px;
+    height: 24px;
+    position: relative;
+    display: block;
+    background: linear-gradient(to bottom, #009e60 0 33.33%, #fcd116 33.33% 66.66%, #3a75c4 66.66% 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transform-origin: left center;
+    animation: gabon-flag-wave 1.8s ease-in-out infinite alternate
+}
+
+.flag-cloth::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(0, 0, 0, .14), rgba(255, 255, 255, .28) 35%, transparent 65%, rgba(0, 0, 0, .12))
+}
+
+@keyframes gabon-flag-wave {
+    from {
+        transform: rotateY(-16deg) skewY(-2deg)
+    }
+
+    to {
+        transform: rotateY(10deg) skewY(2deg)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .flag-cloth {
+        animation: none
+    }
 }
 
 .brand-name {
@@ -206,24 +241,14 @@ h1,h2,h3,p {
     height: 398px;
     position: relative;
     overflow: hidden;
-    background: #232321
+    background: #232321 url("accueil-elephants.png") center 58% / cover no-repeat
 }
 
 .hero-art:before {
     content: "";
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(130deg, transparent 0 29px, rgba(255, 255, 255, .035) 30px 31px)
-}
-
-.art-sun {
-    position: absolute;
-    width: 213px;
-    height: 213px;
-    border-radius: 50%;
-    background: var(--yellow);
-    top: 57px;
-    right: 67px
+    background: linear-gradient(180deg, rgba(20, 20, 18, .14) 0%, rgba(20, 20, 18, .08) 35%, rgba(20, 20, 18, .82) 100%)
 }
 
 .art-line {
@@ -255,13 +280,6 @@ h1,h2,h3,p {
     font-size: 10px;
     letter-spacing: 3px;
     color: var(--yellow)
-}
-
-.art-label strong {
-    display: block;
-    font: 700 34px/1.15 var(--font-display);
-    letter-spacing: -1.3px;
-    margin: 12px 0 21px
 }
 
 .art-label .art-coordinates {
@@ -624,6 +642,10 @@ h1,h2,h3,p {
     color: var(--ink)
 }
 
+.brand-footer .brand-mark > span {
+    color: #fff
+}
+
 .brand-footer .brand-name {
     color: #aaa9a3
 }
@@ -675,41 +697,17 @@ h1,h2,h3,p {
     top: 83px;
     width: 33%;
     height: 300px;
-    background: #222320;
+    background-image: url("gabon-elephants.png");
+    background-position: center 65%;
+    background-size: cover;
     overflow: hidden
 }
 
 .country-graphic:before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    border: 1px solid rgba(255, 255, 255, .15);
-    border-radius: 50%;
-    top: -51px;
-    right: -74px;
-    box-shadow: 0 0 0 27px rgba(255, 255, 255, .03), 0 0 0 55px rgba(255, 255, 255, .025)
-}
-
-.graphic-sun {
-    position: absolute;
-    right: 57px;
-    top: 38px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: var(--yellow)
-}
-
-.graphic-river {
-    position: absolute;
-    left: -30px;
-    bottom: 45px;
-    width: 130%;
-    height: 82px;
-    border-top: 2px solid var(--yellow);
-    border-radius: 50%;
-    transform: rotate(-18deg)
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 20, 18, .08) 25%, rgba(20, 20, 18, .82) 100%)
 }
 
 .graphic-label {
@@ -718,13 +716,15 @@ h1,h2,h3,p {
     bottom: 25px;
     font: 700 23px var(--font-display);
     color: #fff;
-    letter-spacing: 2px
+    letter-spacing: 2px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .8)
 }
 
 .graphic-label small,.graphic-number small {
     font: 600 8px var(--font-body);
     letter-spacing: 1px;
-    color: #bdbbb2
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .9)
 }
 
 .graphic-number {
@@ -733,7 +733,8 @@ h1,h2,h3,p {
     bottom: 23px;
     text-align: right;
     font: 700 28px var(--font-display);
-    color: var(--yellow)
+    color: var(--yellow);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .8)
 }
 
 /* Chiffres et informations synthétiques sur le pays. */
@@ -962,20 +963,9 @@ h1,h2,h3,p {
         height: 310px
     }
 
-    .art-sun {
-        width: 160px;
-        height: 160px;
-        right: 40px;
-        top: 50px
-    }
-
     .art-label {
         left: 27px;
         bottom: 29px
-    }
-
-    .art-label strong {
-        font-size: 28px
     }
 
     .stats-strip {
@@ -1156,18 +1146,21 @@ h1,h2,h3,p {
 }
 
 /* Ajustements complémentaires pour les écrans très étroits. */
-@media(max-width:390px) {
-    .main-nav {
-        gap: 9px
-    }
-
+@media(max-width:480px) {
     .main-nav .nav-cta {
-        font-size: 0
+        font-size: 0;
+        padding: 10px
     }
 
     .main-nav .nav-cta span {
         font-size: 13px;
         margin: 0
+    }
+}
+
+@media(max-width:390px) {
+    .main-nav {
+        gap: 9px
     }
 
     .hero h1,.country-hero h1 {
